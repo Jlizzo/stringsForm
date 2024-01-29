@@ -1,0 +1,58 @@
+<!-- Jody Willems -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script id="script" src="jaelScript.js" ></script> 
+    <link rel="stylesheet" href="myStyle2.css">
+</head>
+<body>
+    <h1>Shhhhh!</h1>
+
+    <p>Want to know a secret?</p>
+    <!-- button displays message prompt when clicked  -->
+    <button type="button" onclick="document.getElementById('secret').innerHTML = 'Register below for the secret!'">Yes, I do</button><br><br>
+    <p id="secret"></p>
+
+  <!-- this is a container for our page-within-a-page that has the user data entry feilds -->
+  <div class="container">
+
+        <!-- the form section of the DIV container has the data entry feilds, and calls to the verifyUser() 
+             function when submit button is clicked -->
+        <form id="form" onsubmit="verifyUser()">
+            <!-- header -->
+            <h1>Register</h1>
+            <!-- DIV class='input-control' is a wrapper just for our First Name: data entry candy bar -->
+            <div class="input-control">
+                <!-- this is the label for our data entry feild -->
+                <label for="first" required>First Name:</label>
+                <!-- this is the space where the user types their info -->
+                <input type="text" id="first" name="first">
+                <!-- this embedded DIV section only gets used if our 'display error message' code gets triggered -->
+                <div class="error"></div>
+                <!-- repeat commentary for the Last Name: and Zipcode input feilds -->
+            </div>
+            <br>
+            <div class="input-control">
+                <label for="last" required>Last Name:</label>
+                <input type="text" id="last" name="last">
+                <div class="error"></div>
+            </div>
+            <br>
+            <div class="input-control">
+                <label for="zip" required>Zipcode:</label>
+                <input type="text" id="zip" name="zip">
+                <div class="error"></div>
+            </div>
+            <br>
+            <button type="submit">Tell Me</button>
+        </form> 
+    </div>
+    <br>
+    <br>
+    <br>
+</body>
+</HTML>
+
